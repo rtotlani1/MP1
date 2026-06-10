@@ -13,3 +13,21 @@ What will the site include?
 
 Who is the audience?
 Primarily potential investors, business partners, and high-intent buyers or tenants — people who already have some context and are looking to verify credibility and get in touch.
+
+Client Brief
+Client: MKS Ventures — a Delhi-based residential and commercial real estate development firm, run by my father
+Purpose: To establish a professional web presence that communicates the firm's credibility and work to investors, partners, and clients
+Audience: Investors, business partners, and serious buyers or tenants looking to verify the firm before reaching out
+Key action: Get in touch with the firm via the contact section
+Sections needed:
+
+Header — firm name, tagline, navigation
+About — who MKS Ventures is, what they build
+Projects — showcase of residential and commercial developments
+Contact — location, email, phone
+
+Content status: All images are available. Written content (project names, descriptions, tagline) to be confirmed with client before final submission.
+Style preferences: Luxury and minimal. Clean whitespace, understated typography, a neutral palette with one strong accent. Nothing loud or cluttered — the design should feel high-end without trying too hard.
+Inspiration sites:
+
+www.dlf.in — client likes the premium feel, the restrained use of color, the way large imagery is used to let the properties speak. The confident, corporate tone with minimal body copy is the target vibe.
