@@ -1,5 +1,15 @@
+/* ─────────────────────────────────────────
+   MKS Ventures — styles.css
+   Palette pulled from logo:
+     Gold:       #C9A84C
+     Cream:      #F5F0E8
+     Charcoal:   #1A1A1A
+     Warm Grey:  #A8A39D
+     White:      #FFFFFF
+───────────────────────────────────────── */
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap');
- 
+
 :root {
   --gold:       #C9A84C;
   --cream:      #F5F0E8;
@@ -9,25 +19,27 @@
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body:    'Inter', Helvetica, sans-serif;
 }
- 
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
- 
+
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
- 
+
 body {
-  background-color: var(--cream);
+  background-color: #E8EDE6;
   color: var(--charcoal);
   font-family: var(--font-body);
   font-weight: 300;
   line-height: 1.7;
+  overflow-x: hidden;
 }
- 
+
 /* ── NAV ── */
 header {
   position: fixed;
@@ -43,25 +55,25 @@ header {
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(201, 168, 76, 0.2);
 }
- 
+
 .nav-logo {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
 }
- 
+
 .nav-logo img {
-  height: 48px;
+  height: 72px;
   width: auto;
 }
- 
+
 nav {
   display: flex;
   gap: 2.5rem;
   align-items: center;
 }
- 
+
 nav a {
   font-family: var(--font-body);
   font-size: 0.78rem;
@@ -73,7 +85,7 @@ nav a {
   position: relative;
   transition: color 0.2s;
 }
- 
+
 nav a::after {
   content: '';
   position: absolute;
@@ -84,47 +96,52 @@ nav a::after {
   background: var(--gold);
   transition: width 0.3s ease;
 }
- 
+
 nav a:hover {
   color: var(--gold);
 }
- 
+
 nav a:hover::after,
 nav a.active::after {
   width: 100%;
 }
- 
+
 nav a.active {
   color: var(--gold);
 }
- 
+
 /* ── HERO (About page) ── */
 .hero {
   position: relative;
   height: 100vh;
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
 }
- 
+
 .hero-bg {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('images/mks-shiva-market.jpg');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   filter: brightness(0.45);
   z-index: 0;
 }
- 
+
 .hero-content {
   position: relative;
   z-index: 1;
   padding: 0 2rem;
 }
- 
+
 .hero-content h1 {
   font-family: var(--font-display);
   font-size: clamp(3rem, 7vw, 6rem);
@@ -134,7 +151,7 @@ nav a.active {
   line-height: 1.1;
   margin-bottom: 1.25rem;
 }
- 
+
 .hero-content p {
   font-size: 0.9rem;
   letter-spacing: 0.18em;
@@ -142,18 +159,24 @@ nav a.active {
   color: var(--gold);
   font-weight: 400;
 }
- 
+
 /* ── SECTIONS ── */
 main {
   padding-top: 80px; /* offset for fixed nav */
 }
- 
-section {
+
+main section {
   padding: 6rem 3rem;
   max-width: 1100px;
   margin: 0 auto;
 }
- 
+
+section.hero {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 section h2 {
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3rem);
@@ -162,14 +185,14 @@ section h2 {
   margin-bottom: 0.5rem;
   letter-spacing: 0.02em;
 }
- 
+
 .section-rule {
   width: 48px;
   height: 1px;
   background: var(--gold);
   margin-bottom: 2.5rem;
 }
- 
+
 /* ── ABOUT SECTION ── */
 .about-grid {
   display: grid;
@@ -177,14 +200,14 @@ section h2 {
   gap: 5rem;
   align-items: start;
 }
- 
+
 .about-text p {
   font-size: 1rem;
   color: #3a3a3a;
   margin-bottom: 1.25rem;
   line-height: 1.85;
 }
- 
+
 .values-list {
   list-style: none;
   display: flex;
@@ -192,7 +215,7 @@ section h2 {
   gap: 0.75rem;
   margin-top: 1rem;
 }
- 
+
 .values-list li {
   font-family: var(--font-display);
   font-size: 1.15rem;
@@ -202,18 +225,18 @@ section h2 {
   padding-left: 1.25rem;
   border-left: 2px solid var(--gold);
 }
- 
+
 .about-meta {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
- 
+
 .stat-block {
   border-top: 1px solid rgba(201, 168, 76, 0.3);
   padding-top: 1.5rem;
 }
- 
+
 .stat-block .number {
   font-family: var(--font-display);
   font-size: 3rem;
@@ -221,7 +244,7 @@ section h2 {
   color: var(--gold);
   line-height: 1;
 }
- 
+
 .stat-block .label {
   font-size: 0.78rem;
   letter-spacing: 0.12em;
@@ -229,14 +252,14 @@ section h2 {
   color: var(--grey);
   margin-top: 0.35rem;
 }
- 
+
 /* ── PROJECT PAGES ── */
 .page-hero {
   padding: 10rem 3rem 4rem;
   max-width: 1100px;
   margin: 0 auto;
 }
- 
+
 .page-hero h1 {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 5vw, 4rem);
@@ -245,14 +268,14 @@ section h2 {
   letter-spacing: 0.03em;
   margin-bottom: 0.5rem;
 }
- 
+
 .page-hero p {
   font-size: 0.82rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--grey);
 }
- 
+
 /* ── PROJECT GRID ── */
 .projects-grid {
   display: grid;
@@ -261,15 +284,15 @@ section h2 {
   max-width: 1100px;
   margin: 0 auto;
 }
- 
+
 .projects-grid.four-col {
   grid-template-columns: repeat(4, 1fr);
 }
- 
+
 .projects-grid.two-col {
   grid-template-columns: repeat(2, 1fr);
 }
- 
+
 .project-card {
   display: flex;
   flex-direction: column;
@@ -278,24 +301,24 @@ section h2 {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
- 
+
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.08);
 }
- 
+
 .project-card img {
   width: 100%;
   aspect-ratio: 4/3;
   object-fit: cover;
   display: block;
 }
- 
+
 .project-card-body {
   padding: 1.25rem 1.5rem 1.5rem;
   border-top: 2px solid var(--gold);
 }
- 
+
 .project-card-body h3 {
   font-family: var(--font-display);
   font-size: 1.25rem;
@@ -304,7 +327,7 @@ section h2 {
   margin-bottom: 0.4rem;
   letter-spacing: 0.02em;
 }
- 
+
 .project-card-body address {
   font-style: normal;
   font-size: 0.78rem;
@@ -312,7 +335,7 @@ section h2 {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
- 
+
 /* ── FOOTER ── */
 footer {
   background: var(--charcoal);
@@ -321,18 +344,18 @@ footer {
   padding: 2.5rem 3rem;
   border-top: 1px solid var(--gold);
 }
- 
+
 footer p {
   font-size: 0.82rem;
   letter-spacing: 0.08em;
 }
- 
+
 footer a {
   color: var(--gold);
   text-decoration: none;
   letter-spacing: 0.06em;
 }
- 
+
 footer .footer-name {
   font-family: var(--font-display);
   font-size: 1.1rem;
@@ -341,52 +364,52 @@ footer .footer-name {
   font-weight: 400;
   letter-spacing: 0.1em;
 }
- 
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   header {
     padding: 1rem 1.5rem;
   }
- 
+
   nav {
     gap: 1.5rem;
   }
- 
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
- 
+
   .projects-grid.four-col {
     grid-template-columns: repeat(2, 1fr);
   }
- 
+
   .projects-grid.two-col {
     grid-template-columns: 1fr;
   }
- 
+
   section {
     padding: 4rem 1.5rem;
   }
- 
+
   .projects-grid {
     padding: 0 1.5rem 4rem;
   }
- 
+
   .page-hero {
     padding: 8rem 1.5rem 3rem;
   }
 }
- 
+
 @media (max-width: 480px) {
   .projects-grid.four-col {
     grid-template-columns: 1fr;
   }
- 
+
   nav {
     gap: 1rem;
   }
- 
+
   nav a {
     font-size: 0.7rem;
   }
