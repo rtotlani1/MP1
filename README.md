@@ -14,7 +14,7 @@ Upcoming Projects — Current developments (MKS County, MKS Shiva Market)
 
 What I Learned
 
-How to structure a multi-page site with consistent navigation using semantic HTML (<header>, <nav>, <main>, <section>, <article>, <aside>, <footer>)
+How to structure a multi-page site with consistent navigation using semantic HTML 
 How to link an external CSS stylesheet and keep styles organized in one place
 How to use CSS Flexbox and Grid to build responsive layouts
 How to make a full-screen hero background image using position: absolute and background-size: cover
