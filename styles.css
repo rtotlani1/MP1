@@ -365,19 +365,77 @@ footer .footer-name {
   letter-spacing: 0.1em;
 }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 900px) {
+/* ── FLUID IMAGES (applies everywhere) ── */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── RESPONSIVE: Mobile-first ── */
+
+/* Base styles = mobile (< 576px) */
+header {
+  padding: 0.75rem 1.25rem;
+}
+
+.nav-logo img {
+  height: 52px;
+}
+
+nav {
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-size: 0.7rem;
+}
+
+.projects-grid.four-col {
+  grid-template-columns: 1fr;
+}
+
+.projects-grid.two-col {
+  grid-template-columns: 1fr;
+}
+
+.about-grid {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+main section {
+  padding: 3rem 1.25rem;
+}
+
+.projects-grid {
+  padding: 0 1.25rem 3rem;
+}
+
+.page-hero {
+  padding: 7rem 1.25rem 2rem;
+}
+
+footer {
+  padding: 2rem 1rem;
+}
+
+/* Tablet: 576px and up */
+@media (min-width: 576px) {
   header {
     padding: 1rem 1.5rem;
+  }
+
+  .nav-logo img {
+    height: 60px;
   }
 
   nav {
     gap: 1.5rem;
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+  nav a {
+    font-size: 0.75rem;
   }
 
   .projects-grid.four-col {
@@ -385,10 +443,10 @@ footer .footer-name {
   }
 
   .projects-grid.two-col {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  section {
+  main section {
     padding: 4rem 1.5rem;
   }
 
@@ -401,16 +459,54 @@ footer .footer-name {
   }
 }
 
-@media (max-width: 480px) {
-  .projects-grid.four-col {
-    grid-template-columns: 1fr;
+/* Desktop: 768px and up */
+@media (min-width: 768px) {
+  header {
+    padding: 1.25rem 3rem;
+  }
+
+  .nav-logo img {
+    height: 72px;
   }
 
   nav {
-    gap: 1rem;
+    gap: 2.5rem;
+    flex-wrap: nowrap;
   }
 
   nav a {
-    font-size: 0.7rem;
+    font-size: 0.78rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+
+  .projects-grid.four-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main section {
+    padding: 6rem 3rem;
+  }
+
+  .projects-grid {
+    padding: 0 3rem 6rem;
+  }
+
+  .page-hero {
+    padding: 10rem 3rem 4rem;
+  }
+
+  footer {
+    padding: 2.5rem 3rem;
+  }
+}
+
+/* Large Desktop: 1024px and up */
+@media (min-width: 1024px) {
+  .projects-grid.four-col {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
