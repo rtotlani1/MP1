@@ -1,5 +1,5 @@
 # MP1
-rtotlani1.github.io/MP1/
+https://rtotlani1.github.io/MP1/
 
 
 MKS Ventures — Website
