@@ -334,6 +334,15 @@ section h2 {
   letter-spacing: 0.02em;
 }
 
+.project-desc {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: #5a5a5a;
+  line-height: 1.6;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
 /* ── FOOTER ── */
 footer {
   background: var(--charcoal);
