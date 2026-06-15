@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — MKS Ventures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+  <body>
+
+    <header>
+      <a href="index.html" class="nav-logo">
+        <img src="images/mks-logo.png" alt="MKS Ventures logo" />
+      </a>
+      <nav>
+        <a href="index.html">About</a>
+        <a href="past-projects.html">Past Projects</a>
+        <a href="upcoming-projects.html">Upcoming</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="page-hero">
+        <h1>Get in Touch</h1>
+        <p>We'd love to hear from you</p>
+      </section>
+
+      <section class="contact-section">
+
+        <form action="https://oim.zhili.dev/echo/view" method="POST" class="contact-form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+91 98999 99210"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="enquiry-type">Type of Enquiry</label>
+            <select id="enquiry-type" name="enquiry_type" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="residential">Residential Project</option>
+              <option value="commercial">Commercial Project</option>
+              <option value="investment">Investment Opportunity</option>
+              <option value="partnership">Business Partnership</option>
+              <option value="general">General Enquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="feedback">Message</label>
+            <textarea
+              id="feedback"
+              name="feedback"
+              placeholder="Tell us about your enquiry or share your feedback..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit">Send Message</button>
+
+        </form>
+
+      </section>
+
+    </main>
+
+    <footer>
+      <p class="footer-name">MKS Ventures</p>
+      <p>Delhi, India &nbsp;·&nbsp; <a href="tel:9899999210">+91 98999 99210</a></p>
+    </footer>
+
+  </body>
+</html>
